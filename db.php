@@ -1,16 +1,9 @@
 <?php
 
+require_once 'config.php';
 // Paramètres de connexion à la base de données
-function connect()
+function connect($db)
 {
-    $db = [
-        'User'   => 'homestead',
-        'Name'   => 'ue223_groupe1',
-        'Server' => 'localhost',
-        'Pass'   => 'secret',
-        'Port'   => '3306',
-    ];
-
     $dsn = "mysql:dbname={$db['Name']};host={$db['Server']};port={$db['Port']};charset=utf8";
 
     try {
@@ -35,7 +28,7 @@ function createTrad($FR, $EN, $ES)
 {
     $sql = 'INSERT INTO `mots` (`FR`, `EN`, `ES`) VALUES (:FR, :EN, :ES)';
 
-    $connect = connect();
+    $connect = connect($db);
     $query = $connect->prepare($sql);
 
     $created = $query->execute([
