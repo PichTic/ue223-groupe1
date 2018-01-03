@@ -37,36 +37,42 @@
 		</table>
 	</p>
   <fieldset>
-  	<legend>Traduire un terme</legend>
-  	<form id="formTraduire" method="POST">
-  		<label>Texte à traduire : </label>
-  		<input type="text" name=""/>
-
-  		<input type="submit" name="boutonTraduire" value="Traduire" />
-
-  		<div id="resultat_traduction">
-  			<p>Traduction : <br>
-	  			Anglais : <span id="tradEN"></span><br>
-	  			Espagnol : <span id="tradES"></span><br>
-	  			Français : <span id="tradFR"></span><br>
-  			</p>
-  		</div>
-  		
-  	</form>
+		<legend>Traduction</legend>
+		<p>Traduire de :
+			<select>
+				<option value="mot_FR">Français</option>
+				<option value="mot_EN">Anglais</option>
+				<option value="mot_EN">Espagnole</option>
+			</select>
+			En :
+			<select>
+				<option value="trad_FR">Français</option>
+				<option value="trad_EN">Anglais</option>
+				<option value="trad_ES">Espagnole</option>
+			</select>
+		</p>
+		<label>Votre mot :</label>
+		<input type="text" name="mot" id="mot">
+		<button type="submit">Traduire</button>
+		<label>Résultat</label>
+		<input type="text" name="trad" id="trad" disabled>
   </fieldset>
 
   <fieldset>
   	<legend>Ajouter un terme dans la base de données</legend>
   	<form id="formAjouter" method="POST">
   		<label>Mot en Français : </label>
-  		<input type="text" name="ajoutFR"/>
+  		<input type="text" name="ajout_FR" id="ajout_FR"/>
   		<label>Mot en Anglais : </label>
-  		<input type="text" name="ajoutEN"/>
+  		<input type="text" name="ajout_EN" id="ajout_EN"/>
   		<label>Mot en Espagnol : </label>
-  		<input type="text" name="ajoutES"/>
-
-  		<input type="submit" name="boutonAjouter" value="Ajouter">
-  	</form>
-  </fieldset>
+  		<input type="text" name="ajout_ES" id="ajout_ES"/>
+  		<button type="button" name="ajout_Trad" id="ajout_Trad">Ajouter</button>
+		</form>
+		<div id="retourAjout"></div>
+	</fieldset>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./utils.js"></script>
+	<script src="./ajout_Trad.js"></script>
 </body>
 </html>
