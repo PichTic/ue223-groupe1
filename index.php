@@ -38,24 +38,29 @@
 	</p>
   <fieldset>
 		<legend>Traduction</legend>
-		<p>Traduire de :
-			<select id="lang_trad">
-				<option value="Français">Français</option>
-				<option value="Anglais">Anglais</option>
-				<option value="Espagnol">Espagnol</option>
-			</select>
-			En :
-			<select id="lang_cible">
-				<option value="Français">Français</option>
-				<option value="Anglais">Anglais</option>
-				<option value="Espagnol">Espagnol</option>
-			</select>
-		</p>
-		<label>Votre mot :</label>
-		<input type="text" name="mot" id="mot">
-		<button type="submit" id="demande_trad">Traduire</button>
+		<form id="form_trad" method="POST">
+			<p>
+				Traduire de :
+				<select name="lang_trad" id="lang_trad">
+					<option value="Français">Français</option>
+					<option value="Anglais">Anglais</option>
+					<option value="Espagnol">Espagnol</option>
+				</select>
+				En :
+				<select name="lang_cible" id="lang_cible">
+					<option value="Français">Français</option>
+					<option value="Anglais">Anglais</option>
+					<option value="Espagnol">Espagnol</option>
+				</select>
+			</p>
+			<label>Votre mot :</label>
+			<input type="text" name="mot" id="mot">
+			<button type="submit" id="demande_trad">Traduire</button>
+		</form>
+		<br>
 		<label>Résultat</label>
 		<input type="text" name="trad" id="trad" enabled>
+		<div id="retourAjout2"></div>
   </fieldset>
 
   <fieldset>
