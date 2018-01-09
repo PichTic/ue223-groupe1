@@ -1,6 +1,7 @@
 <?php
 
 require_once 'db.php';
+require_once 'config.php';
 
 $hasErrors = [];
 $tempData = [];
@@ -105,7 +106,7 @@ if (filter_has_var(INPUT_POST, 'ajout_Trad')) {
         $EN = $tempData['ajout_EN'];
         $ES = $tempData['ajout_ES'];
 
-        $traduction = createTrad($FR, $EN, $ES);
+        $traduction = createTrad($db, $FR, $EN, $ES);
         if (! $traduction) {
             $hasErrors[] = 'query';
             $tempData['query'] = 'une erreur est survenue lors de la création de la traduction en BDD';
