@@ -1,6 +1,6 @@
 <?php
 
-require_once 'config.php';
+require_once './config.php';
 // Paramètres de connexion à la base de données
 function connect($db)
 {
@@ -24,7 +24,7 @@ function deconnect($connect)
     unset($connect);
 }
 
-function createTrad($FR, $EN, $ES)
+function createTrad($db, $FR, $EN, $ES)
 {
     $sql = 'INSERT INTO `mots` (`FR`, `EN`, `ES`) VALUES (:FR, :EN, :ES)';
 
