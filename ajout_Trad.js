@@ -40,7 +40,7 @@ $('#ajout_Trad').on('click', function(){
     });
 
     trads.fail(function() {
-      $("#retourAjout").html('<p>Une erreure est survenue, reesayer</p>');
+      $("#retourAjout").html('<p>Une erreur est survenue, reesayer</p>');
     })
   }
 });

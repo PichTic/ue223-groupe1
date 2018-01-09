@@ -1,7 +1,7 @@
 //functions utilitaires
 
 /**
- * function qui controle la longueure d'un mot
+ * function qui controle la longueur d'un mot
  * @param {string} mot
  * @return {bool}
  */

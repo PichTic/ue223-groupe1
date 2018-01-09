@@ -39,23 +39,23 @@
   <fieldset>
 		<legend>Traduction</legend>
 		<p>Traduire de :
-			<select>
-				<option value="mot_FR">Français</option>
-				<option value="mot_EN">Anglais</option>
-				<option value="mot_EN">Espagnole</option>
+			<select id="lang_trad">
+				<option value="Français">Français</option>
+				<option value="Anglais">Anglais</option>
+				<option value="Espagnol">Espagnol</option>
 			</select>
 			En :
-			<select>
-				<option value="trad_FR">Français</option>
-				<option value="trad_EN">Anglais</option>
-				<option value="trad_ES">Espagnole</option>
+			<select id="lang_cible">
+				<option value="Français">Français</option>
+				<option value="Anglais">Anglais</option>
+				<option value="Espagnol">Espagnol</option>
 			</select>
 		</p>
 		<label>Votre mot :</label>
 		<input type="text" name="mot" id="mot">
-		<button type="submit">Traduire</button>
+		<button type="submit" id="demande_trad">Traduire</button>
 		<label>Résultat</label>
-		<input type="text" name="trad" id="trad" disabled>
+		<input type="text" name="trad" id="trad" enabled>
   </fieldset>
 
   <fieldset>
@@ -74,5 +74,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./utils.js"></script>
 	<script src="./ajout_Trad.js"></script>
+	<script src="./demande_trad.js"></script>
 </body>
 </html>
