@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="./plugin/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
   <title>Réalisation d’un dictionnaire multi-langues - Groupe 1</title>
 </head>
 <body>
@@ -39,21 +40,23 @@
   <fieldset>
 		<legend>Traduction</legend>
 		<p>Traduire de :
-			<select>
-				<option value="mot_FR">Français</option>
-				<option value="mot_EN">Anglais</option>
-				<option value="mot_EN">Espagnole</option>
+			<select name="from" id="from">
+				<option value="FR">Français</option>
+				<option value="EN">Anglais</option>
+				<option value="ES">Espagnole</option>
 			</select>
 			En :
-			<select>
-				<option value="trad_FR">Français</option>
-				<option value="trad_EN">Anglais</option>
-				<option value="trad_ES">Espagnole</option>
+			<select name="to">
+				<option value="FR">Français</option>
+				<option value="EN">Anglais</option>
+				<option value="ES">Espagnole</option>
 			</select>
 		</p>
+
 		<label>Votre mot :</label>
-		<input type="text" name="mot" id="mot">
-		<button type="submit">Traduire</button>
+		<input type="text" name="mot" id="mot" class="flexdatalist">
+		<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
+
 		<label>Résultat</label>
 		<input type="text" name="trad" id="trad" disabled>
   </fieldset>
@@ -72,7 +75,9 @@
 		<div id="retourAjout"></div>
 	</fieldset>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./plugin/jquery.flexdatalist.min.js"></script>
 	<script src="./utils.js"></script>
 	<script src="./ajout_Trad.js"></script>
+	<script src="./get_Trad.js"></script>
 </body>
 </html>
