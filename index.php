@@ -43,13 +43,13 @@
 			<select name="from" id="from">
 				<option value="FR">Français</option>
 				<option value="EN">Anglais</option>
-				<option value="ES">Espagnole</option>
+				<option value="ES">Espagnol</option>
 			</select>
 			En :
 			<select name="to" id="to">
 				<option value="FR">Français</option>
 				<option value="EN">Anglais</option>
-				<option value="ES">Espagnole</option>
+				<option value="ES">Espagnol</option>
 			</select>
 		</p>
 
