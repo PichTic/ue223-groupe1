@@ -46,7 +46,7 @@
 				<option value="ES">Espagnole</option>
 			</select>
 			En :
-			<select name="to">
+			<select name="to" id="to">
 				<option value="FR">Français</option>
 				<option value="EN">Anglais</option>
 				<option value="ES">Espagnole</option>
@@ -74,10 +74,11 @@
 		</form>
 		<div id="retourAjout"></div>
 	</fieldset>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="./plugin/jquery.flexdatalist.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./plugin/jquery.flexdatalist.min.js"></script>
 	<script src="./utils.js"></script>
 	<script src="./ajout_Trad.js"></script>
 	<script src="./get_Trad.js"></script>
+	<script src="./search_Trad.js"></script>
 </body>
 </html>
