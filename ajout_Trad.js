@@ -31,7 +31,7 @@ $('#ajout_Trad').on('click', function(){
     returnErrors(errors, '#retourAjout');
   }
   if(errors.length == 0) {
-    var trads = $.post( "form.php", $( "#formAjouter" ).serialize() + '&ajout_Trad=' );
+    var trads = $.post( "form_add.php", $( "#formAjouter" ).serialize() + '&ajout_Trad=' );
 
     trads.done(function(data) {
       var data = JSON.parse(data);
