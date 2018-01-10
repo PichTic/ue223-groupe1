@@ -60,19 +60,3 @@ function findWords($db, $langue, $keyword)
 
     return $data;
 }
-
-function test($db)
-{
-    $sql = "SELECT `FR` FROM `mots` WHERE `FR` LIKE '%tes%'";
-
-    $connect = connect($db);
-    $query = $connect->prepare($sql);
-    $query->execute();
-    $query->debugDumpParams();
-
-    $data = $query->fetchAll();
-
-    deconnect($connect);
-
-    return $data;
-}

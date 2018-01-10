@@ -53,7 +53,6 @@ if (filter_has_var(INPUT_GET, 'submit')) {
         $langue = $tempData['langue'];
 
         $traduction = findWords($db, $langue, $keyword);
-        // $traduction = test($db);
         echo resultats('success', $traduction);
         exit;
     }
