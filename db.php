@@ -1,6 +1,6 @@
 <?php
 
-require_once './config.php';
+require_once './require.php';
 // Paramètres de connexion à la base de données
 function connect($db)
 {
@@ -40,4 +40,23 @@ function createTrad($db, $FR, $EN, $ES)
     deconnect($connect);
 
     return $created;
+}
+
+function findWords($db, $langue, $keyword)
+{
+    //impossible de mettre une colonne en param de PDO
+    $column = mb_strtoupper($langue);
+
+    $sql = "SELECT `{$column}` FROM `mots` WHERE `{$column}` LIKE :keyword";
+
+    $connect = connect($db);
+    $query = $connect->prepare($sql);
+    $query->bindValue(':keyword', "%{$keyword}%");
+    $query->execute();
+
+    $data = $query->fetchAll();
+
+    deconnect($connect);
+
+    return $data;
 }
