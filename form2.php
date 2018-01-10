@@ -59,3 +59,10 @@
 	/*
 	 *
 	 */
+
+	$resultats = filter_input_array(INPUT_POST, $filter_post);
+
+	foreach ($resultats as $name => $value) {
+		$tempData[$name]=$value;
+	}
+	if ($tempData['mot'])
