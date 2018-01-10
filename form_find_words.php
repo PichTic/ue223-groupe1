@@ -53,7 +53,7 @@ if (filter_has_var(INPUT_GET, 'submit')) {
         $langue = $tempData['langue'];
 
         $traduction = findWords($db, $langue, $keyword);
-        echo resultats('success', $traduction);
+        echo autocomplete($traduction);
         exit;
     }
     if (count($hasErrors) > 0) {

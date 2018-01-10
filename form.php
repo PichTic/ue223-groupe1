@@ -89,3 +89,8 @@ function resultats($status, $content)
 
     return json_encode($tempArray);
 }
+
+function autocomplete($content)
+{
+    return json_encode($content);
+}
