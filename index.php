@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="./plugin/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
   <title>Réalisation d’un dictionnaire multi-langues - Groupe 1</title>
 </head>
 <body>
@@ -38,29 +39,26 @@
 	</p>
   <fieldset>
 		<legend>Traduction</legend>
-		<form id="form_trad" method="POST">
-			<p>
-				Traduire de :
-				<select name="lang_trad" id="lang_trad">
-					<option value="Français">Français</option>
-					<option value="Anglais">Anglais</option>
-					<option value="Espagnol">Espagnol</option>
-				</select>
-				En :
-				<select name="lang_cible" id="lang_cible">
-					<option value="Français">Français</option>
-					<option value="Anglais">Anglais</option>
-					<option value="Espagnol">Espagnol</option>
-				</select>
-			</p>
-			<label>Votre mot :</label>
-			<input type="text" name="mot" id="mot">
-			<button type="submit" id="demande_trad">Traduire</button>
-		</form>
-		<br>
+		<p>Traduire de :
+			<select name="from" id="from">
+				<option value="FR">Français</option>
+				<option value="EN">Anglais</option>
+				<option value="ES">Espagnole</option>
+			</select>
+			En :
+			<select name="to" id="to">
+				<option value="FR">Français</option>
+				<option value="EN">Anglais</option>
+				<option value="ES">Espagnole</option>
+			</select>
+		</p>
+
+		<label>Votre mot :</label>
+		<input type="text" name="mot" id="mot" class="flexdatalist">
+		<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
+
 		<label>Résultat</label>
-		<input type="text" name="trad" id="trad" enabled>
-		<div id="retourAjout2"></div>
+		<input type="text" name="trad" id="trad" disabled>
   </fieldset>
 
   <fieldset>
@@ -77,8 +75,10 @@
 		<div id="retourAjout"></div>
 	</fieldset>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./plugin/jquery.flexdatalist.min.js"></script>
 	<script src="./utils.js"></script>
 	<script src="./ajout_Trad.js"></script>
-	<script src="./demande_trad.js"></script>
+	<script src="./get_Trad.js"></script>
+	<script src="./search_Trad.js"></script>
 </body>
 </html>
