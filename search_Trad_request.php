@@ -9,9 +9,9 @@
     $connect = connect($db);
 
     //Requête pour chercher dans la base le mot traduit en fonction de la langue d'origine
-    if ($langueOrigine = 'FR') {
+    if ($langueOrigine == 'FR') {
         $requete = $connect->prepare('SELECT * FROM mots WHERE FR = :mot');
-    } elseif ($langueOrigine = 'EN') {
+    } elseif ($langueOrigine == 'EN') {
         $requete = $connect->prepare('SELECT * FROM mots WHERE EN = :mot');
     } else {
         $requete = $connect->prepare('SELECT * FROM mots WHERE ES = :mot');
