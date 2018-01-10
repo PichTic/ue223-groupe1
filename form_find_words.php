@@ -56,12 +56,4 @@ if (filter_has_var(INPUT_GET, 'submit')) {
         echo autocomplete($traduction);
         exit;
     }
-    if (count($hasErrors) > 0) {
-        $msg = '';
-        foreach ($hasErrors as $name) {
-            $msg .= $tempData[$name];
-        }
-
-        echo resultats('fail', $msg);
-    }
 }
