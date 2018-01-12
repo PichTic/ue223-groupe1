@@ -1,0 +1,13 @@
+html 
+
+body
+
+
+
+ul { list-style: none; }
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
