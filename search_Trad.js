@@ -11,10 +11,11 @@ function search_request(mot,langueOrigine,langueCible){
 	}).done(function(data){
 		if(data == ""){
 			$("#trad").val('Mot non trouvé.');
-		}
-		else {
+		}else {
 			$("#trad").val(data);
 		}
+	}).fail(function(){
+		$("#retourSearch").html('<p>Une erreur est survenue, réessayer</p>');
 	});
 }
 /**********************************/
@@ -24,9 +25,21 @@ function search_button_pressed(){
 	var langueOrigine = $('#from').val();
 	var langueCible = $('#to').val();
 	var mot = $('#mot').val();
+
+	//avertissement langues similaires
+	if(langueCible==langueOrigine){
+		$('#retourSearch').html("<p><strong>Attention vous utilisez la même langue pour traduire !</strong></p>");
+	}else{
+		$('#retourSearch').html("");
+	}
 	
 	//On exécute l'appel AJAX
-	search_request(mot,langueOrigine,langueCible);
+	if(checkWords(mot)==false){
+		$("#mot-flexdatalist").val("");
+		$("#mot-flexdatalist").attr('placeholder','Rentrez un mot valide');
+	}else{
+		search_request(mot,langueOrigine,langueCible);
+	}
 }
 
 	

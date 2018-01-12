@@ -8,6 +8,7 @@
   <title>Réalisation d’un dictionnaire multi-langues - Groupe 1</title>
 </head>
 <body>
+	<h1>Dictionnaire Multi-langues</h1>
 	<p>
 		<strong>UE 223 - Mini-projet</strong><br/>
 		<table>
@@ -54,11 +55,12 @@
 		</p>
 
 		<label>Votre mot :</label>
-		<input type="text" name="mot" id="mot" class="flexdatalist">
+		<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
 		<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
 
 		<label>Résultat</label>
 		<input type="text" name="trad" id="trad" disabled>
+		<div id="retourSearch"></div>
   </fieldset>
 
   <fieldset>

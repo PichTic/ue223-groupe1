@@ -30,9 +30,9 @@ if (filter_has_var(INPUT_POST, 'ajout_Trad')) {
         }
     }
     if (0 === count($hasErrors)) {
-        $FR = $tempData['ajout_FR'];
-        $EN = $tempData['ajout_EN'];
-        $ES = $tempData['ajout_ES'];
+        $FR = mb_strtolower($tempData['ajout_FR']);
+        $EN = mb_strtolower($tempData['ajout_EN']);
+        $ES = mb_strtolower($tempData['ajout_ES']);
 
         $traduction = createTrad($db, $FR, $EN, $ES);
         if (! $traduction) {
