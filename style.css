@@ -19,10 +19,10 @@ ul { list-style: none; }
 fieldset {
 	border-radius: 0.6em;
 	margin: 2em 0em;
-	background-color: rgba(51,102,255,0.1); /* hex #3366FF */
+	background-color: rgba(255,51,255,0.1); /* hex #3366FF */
 }
 legend {
-	color: rgb(51, 102, 255); /* hex #3366FF */
+	color: rgb(255,51,255); /* hex #3366FF */
 }
 
 .row {
@@ -32,7 +32,7 @@ legend {
 }
 
 button {
-	background-color: rgba(51, 102, 255,0.9); /* hex #3366FF */
+	background-color: rgba(255,51,255,0.9); /* hex #3366FF */
 	border: none;
     color: rgb(255, 255, 255);
 	padding: 0.4em 0.8em; margin: 0.5em 0.5em;
@@ -42,8 +42,8 @@ button {
     border-radius: 0.5em; -webkit-border-radius: 8; -moz-border-radius: 8;
 }
 button:hover {
-	background-color: rgba(0, 68, 255,0.8); /* hex #0044ff */
-	box-shadow: 0.1em 0.1em 0.1em rgba(0,80,255,0.5);
+	background-color: rgba(255,20,255,0.8); /* hex #0044ff */
+	box-shadow: 0.1em 0.1em 0.1em rgba(255,20,255,0.5);
 }
 select {
 	border-radius: 0.5em;
@@ -58,7 +58,7 @@ input:hover {
 	border-color: rgb(0,0,0);
 }
 input:focus {
-	border: solid 0.15em rgb(51, 102, 255); /* hex #3366FF */
+	border: solid 0.15em rgb(255,51,255); /* hex #3366FF */
 }
 
 @media screen and (max-width: 480px) {
