@@ -10,99 +10,61 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-	<h1>Dictionnaire Multi-langues</h1>
-	<p>
-		<strong>UE 223 - Mini-projet</strong><br/>
-		<table>
-			<tr>
-				<td><strong>Nom</strong></td>
-				<td><strong>Prenom</strong></td>
-			</tr>
-			<tr>
-				<td>Da Silva</td>
-				<td>Raphael</td>
-			</tr>
-			<tr>
-				<td>Latouille</td>
-				<td>Melissa</td>
-			</tr>
-			<tr>
-				<td>Lombardi</td>
-				<td>Marion</td>
-			</tr>
-			<tr>
-				<td>Pichot</td>
-				<td>Vincent</td>
-			</tr>
-			<tr>
-				<td>Suarez</td>
-				<td>Maxime</td>
-			</tr>
-		</table>
-	</p>
-  <fieldset>
-		<legend>Traduction</legend>
-		<p>Traduire de :
-			<select name="from" id="from">
-				<option value="FR">Français</option>
-				<option value="EN">Anglais</option>
-				<option value="ES">Espagnol</option>
-			</select>
-			En :
-			<select name="to" id="to">
-				<option value="FR">Français</option>
-				<option value="EN">Anglais</option>
-				<option value="ES">Espagnol</option>
-			</select>
-		</p>
-
-		<label>Votre mot :</label>
-		<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
-		<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
-
-		<label>Résultat</label>
-		<input type="text" name="trad" id="trad" disabled>
-		<div id="retourSearch"></div>
-  </fieldset>
-=======
 	<div class="container">
-	<div class="row">
-		<h4>UE 223 - Mini-projet</h4>
-		<ul>
-			<li>Da Silva Raphael</li>
-			<li>Latouille Melissa</li>
-			<li>Lombardi Marion</li>
-			<li>Vincent Pichot</li>
-			<li>Suarez Maxime</li>
-		</ul>
-	</div>
-	<div class="row">
-	  	<fieldset>
-	  		<legend>Traduction</legend>
-	  		<form>
-				<p>Traduire de :
-					<select name="from" id="from">
-						<option value="FR">Français</option>
-						<option value="EN">Anglais</option>
-						<option value="ES">Espagnol</option>
-					</select>
-					En :
-					<select name="to" id="to">
-						<option value="FR">Français</option>
-						<option value="EN">Anglais</option>
-						<option value="ES">Espagnol</option>
-					</select>
-				</p>
+		<h1>Dictionnaire Multi-langues</h1>
+		<p>
+			<strong>UE 223 - Mini-projet</strong><br/>
+			<table>
+				<tr>
+					<td><strong>Nom</strong></td>
+					<td><strong>Prenom</strong></td>
+				</tr>
+				<tr>
+					<td>Da Silva</td>
+					<td>Raphael</td>
+				</tr>
+				<tr>
+					<td>Latouille</td>
+					<td>Melissa</td>
+				</tr>
+				<tr>
+					<td>Lombardi</td>
+					<td>Marion</td>
+				</tr>
+				<tr>
+					<td>Pichot</td>
+					<td>Vincent</td>
+				</tr>
+				<tr>
+					<td>Suarez</td>
+					<td>Maxime</td>
+				</tr>
+			</table>
+		</p>
+ 		<fieldset>
+			<legend>Traduction</legend>
+			<p>Traduire de :
+				<select name="from" id="from">
+					<option value="FR">Français</option>
+					<option value="EN">Anglais</option>
+					<option value="ES">Espagnol</option>
+				</select>
+				En :
+				<select name="to" id="to">
+					<option value="FR">Français</option>
+					<option value="EN">Anglais</option>
+					<option value="ES">Espagnol</option>
+				</select>
+			</p>
 
-				<label>Votre mot :</label>
-				<input type="text" name="mot" id="mot" class="flexdatalist">
-				<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
+			<label>Votre mot :</label>
+			<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
+			<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
 
-				<label>Résultat</label>
-				<input type="text" name="trad" id="trad" disabled>
-			</form>
-	 	</fieldset>
+			<label>Résultat</label>
+			<input type="text" name="trad" id="trad" disabled>
+			<div id="retourSearch"></div>
+  		</fieldset>
 	
 	  	<fieldset>
 		  	<legend>Ajouter un terme dans la base de données</legend>
@@ -119,8 +81,6 @@
 			</form>
 		</fieldset>
 	</div>
-	</div>
->>>>>>> c0eac85f26dfcfbee64846b3456a071ed6e6ccfe
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./plugin/jquery.flexdatalist.min.js"></script>
