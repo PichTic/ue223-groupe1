@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="./plugin/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="style.css">
   <title>Réalisation d’un dictionnaire multi-langues - Groupe 1</title>
 </head>
 
 <body>
 	<div class="container">
-		<h1>Dictionnaire Multi-langues</h1>
 		<div class="students">
 			<h4>UE 223 - Mini-projet</h4>
 			<ul>
@@ -23,31 +22,33 @@
 			</ul>
 		</div>
 		<div class="row">
-	 		<fieldset>
-				<legend>Traduction</legend>
-				<p>Traduire de :
-					<select name="from" id="from">
-						<option value="FR">Français</option>
-						<option value="EN">Anglais</option>
-						<option value="ES">Espagnol</option>
-					</select>
-					En :
-					<select name="to" id="to">
-						<option value="FR">Français</option>
-						<option value="EN">Anglais</option>
-						<option value="ES">Espagnol</option>
-					</select>
-				</p>
+		  	<fieldset>
+		  		<legend>Traduction</legend>
+		  		<form>
+					<p>Traduire de :
+						<select name="from" id="from">
+							<option value="FR">Français</option>
+							<option value="EN">Anglais</option>
+							<option value="ES">Espagnol</option>
+						</select>
+						En :
+						<select name="to" id="to">
+							<option value="FR">Français</option>
+							<option value="EN">Anglais</option>
+							<option value="ES">Espagnol</option>
+						</select>
+					</p>
 
-				<label>Votre mot :</label>
-				<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
-				<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
+					<label>Votre mot :</label>
+					<input type="text" name="mot" id="mot" class="flexdatalist">
+					<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
 
-				<label>Résultat</label>
-				<input type="text" name="trad" id="trad" disabled>
-				<div id="retourSearch"></div>
-	  		</fieldset>
-	
+					<label>Résultat</label>
+					<input type="text" name="trad" id="trad" disabled>
+					<div id="retourSearch"></div>
+				</form>
+		 	</fieldset>
+
 		  	<fieldset>
 			  	<legend>Ajouter un terme dans la base de données</legend>
 			  	<form id="formAjouter" method="POST">
