@@ -11,75 +11,58 @@
 
 <body>
 	<div class="container">
-		<h1>Dictionnaire Multi-langues</h1>
-		<p>
-			<strong>UE 223 - Mini-projet</strong><br/>
-			<table>
-				<tr>
-					<td><strong>Nom</strong></td>
-					<td><strong>Prenom</strong></td>
-				</tr>
-				<tr>
-					<td>Da Silva</td>
-					<td>Raphael</td>
-				</tr>
-				<tr>
-					<td>Latouille</td>
-					<td>Melissa</td>
-				</tr>
-				<tr>
-					<td>Lombardi</td>
-					<td>Marion</td>
-				</tr>
-				<tr>
-					<td>Pichot</td>
-					<td>Vincent</td>
-				</tr>
-				<tr>
-					<td>Suarez</td>
-					<td>Maxime</td>
-				</tr>
-			</table>
-		</p>
- 		<fieldset>
-			<legend>Traduction</legend>
-			<p>Traduire de :
-				<select name="from" id="from">
-					<option value="FR">Français</option>
-					<option value="EN">Anglais</option>
-					<option value="ES">Espagnol</option>
-				</select>
-				En :
-				<select name="to" id="to">
-					<option value="FR">Français</option>
-					<option value="EN">Anglais</option>
-					<option value="ES">Espagnol</option>
-				</select>
-			</p>
+		<div class="row">
+			<h1>Dictionnaire Multi-langues</h1>
+			<div class="students">
+				<h4>UE 223 - Mini-projet</h4>
+				<ul>
+ 					<li>Da Silva Raphael</li>
+ 					<li>Latouille Melissa</li>
+ 					<li>Lombardi Marion</li>
+ 					<li>Vincent Pichot</li>
+ 					<li>Suarez Maxime</li>
+  				</ul>
+			</div>
+ 			<fieldset>
+				<legend>Traduction</legend>
+				<p>Traduire de :
+					<select name="from" id="from">
+						<option value="FR">Français</option>
+						<option value="EN">Anglais</option>
+						<option value="ES">Espagnol</option>
+					</select>
+					En :
+					<select name="to" id="to">
+						<option value="FR">Français</option>
+						<option value="EN">Anglais</option>
+						<option value="ES">Espagnol</option>
+					</select>
+				</p>
 
-			<label>Votre mot :</label>
-			<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
-			<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
+				<label>Votre mot :</label>
+				<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
+				<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
 
-			<label>Résultat</label>
-			<input type="text" name="trad" id="trad" disabled>
-			<div id="retourSearch"></div>
-  		</fieldset>
+				<label>Résultat</label>
+				<input type="text" name="trad" id="trad" disabled>
+				<div id="retourSearch"></div>
+  			</fieldset>
 	
-	  	<fieldset>
-		  	<legend>Ajouter un terme dans la base de données</legend>
-		  	<form id="formAjouter" method="POST">
-		  		<label>Mot en Français : </label>
-		  		<input type="text" name="ajout_FR" id="ajout_FR"/>
-		  		<label>Mot en Anglais : </label>
-		  		<input type="text" name="ajout_EN" id="ajout_EN"/>
-		  		<label>Mot en Espagnol : </label>
-		  		<input type="text" name="ajout_ES" id="ajout_ES"/>
-		  		<button type="button" name="ajout_Trad" id="ajout_Trad">Ajouter</button>
+	  		<fieldset>
+			  	<legend>Ajouter un terme dans la base de données</legend>
+			  	<form id="formAjouter" method="POST">
+			  		<label>Mot en Français : </label>
+			  		<input type="text" name="ajout_FR" id="ajout_FR"/>
+			  		<label>Mot en Anglais : </label>
+		  			<input type="text" name="ajout_EN" id="ajout_EN"/>
+		  			<label>Mot en Espagnol : </label>
+		  			<input type="text" name="ajout_ES" id="ajout_ES"/>
+		  			<button type="button" name="ajout_Trad" id="ajout_Trad">Ajouter</button>
 				
-				<div id="retourAjout"></div>
-			</form>
-		</fieldset>
+					<div id="retourAjout"></div>
+				</form>
+			</fieldset>
+		</div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
