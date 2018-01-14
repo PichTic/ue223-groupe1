@@ -66,9 +66,9 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./plugin/jquery.flexdatalist.min.js"></script>
-	<script src="./utils.js"></script>
-	<script src="./ajout_Trad.js"></script>
-	<script src="./get_Trad.js"></script>
-	<script src="./search_Trad.js"></script>
+	<script src="./js/utils.js"></script>
+	<script src="./js/ajout_Trad.js"></script>
+	<script src="./js/get_Trad.js"></script>
+	<script src="./js/search_Trad.js"></script>
 </body>
 </html>

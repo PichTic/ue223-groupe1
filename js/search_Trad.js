@@ -1,7 +1,7 @@
 /*************Appel AJAX************/
 function search_request(mot,langueOrigine,langueCible){
 	$.ajax({
-		url: 'search_Trad_request.php',
+		url: './php/search_Trad_request.php',
 		type: 'POST',
 		data: {
 			mot: mot,
@@ -9,10 +9,12 @@ function search_request(mot,langueOrigine,langueCible){
 			langueCible: langueCible,
 		}
 	}).done(function(data){
-		if(data == ""){
+		var data = JSON.parse(data);
+
+		if(data.status == 'failed'){
 			$("#trad").val('Mot non trouvé.');
 		}else {
-			$("#trad").val(data);
+			$("#trad").val(data.content[0][langueCible]);
 		}
 	}).fail(function(){
 		$("#retourSearch").html('<p>Une erreur est survenue, réessayer</p>');
@@ -29,12 +31,7 @@ function search_button_pressed(){
 	//avertissement langues similaires
 	if(langueCible==langueOrigine){
 		$('#retourSearch').html("<p><strong>Attention vous utilisez la même langue pour traduire !</strong></p>");
-	}else{
-		$('#retourSearch').html("");
-	}
-	
-	//On exécute l'appel AJAX
-	if(checkWords(mot)==false){
+	}else if(checkWords(mot)==false){
 		$("#mot-flexdatalist").val("");
 		$("#mot-flexdatalist").attr('placeholder','Rentrez un mot valide');
 	}else{
@@ -42,8 +39,8 @@ function search_button_pressed(){
 	}
 }
 
-	
+
 //A l'appui du bouton, on exécute la fonction
-$("#get_Trad").click(function(){
+$("#get_Trad").on('click', function(){
 	search_button_pressed();
 });

@@ -1,5 +1,5 @@
 var options = {
-  url: "./form_find_words.php",
+  url: "./php/form_find_words.php",
   params: {
     langue: 'FR',
     submit: $('#get_Trad').attr('name'),
