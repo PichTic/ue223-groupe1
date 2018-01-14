@@ -11,6 +11,7 @@
 
 <body>
 	<div class="container">
+<<<<<<< HEAD
 		<div class="students">
 			<h4>UE 223 - Mini-projet</h4>
 			<ul>
@@ -50,16 +51,63 @@
 		 	</fieldset>
 
 		  	<fieldset>
+=======
+		<div class="row">
+			<h1>Dictionnaire Multi-langues</h1>
+			<div class="students">
+				<h4>UE 223 - Mini-projet</h4>
+				<ul>
+ 					<li>Latouille Melissa</li>
+ 					<li>Lombardi Marion</li>
+ 					<li>Vincent Pichot</li>
+ 					<li>Suarez Maxime</li>
+  				</ul>
+			</div>
+ 			<fieldset>
+				<legend>Traduction</legend>
+				<p>Traduire de :
+					<select name="from" id="from">
+						<option value="FR">Français</option>
+						<option value="EN">Anglais</option>
+						<option value="ES">Espagnol</option>
+					</select>
+					En :
+					<select name="to" id="to">
+						<option value="FR">Français</option>
+						<option value="EN">Anglais</option>
+						<option value="ES">Espagnol</option>
+					</select>
+				</p>
+
+				<label>Votre mot :</label>
+				<input type="text" name="mot" id="mot" class="flexdatalist" placeholder="Votre mot">
+				<button type="submit" name="get_Trad" id="get_Trad">Traduire</button>
+
+				<label>Résultat</label>
+				<input type="text" name="trad" id="trad" disabled>
+				<div id="retourSearch"></div>
+  			</fieldset>
+
+	  		<fieldset>
+>>>>>>> version_stable_css_bdd
 			  	<legend>Ajouter un terme dans la base de données</legend>
 			  	<form id="formAjouter" method="POST">
 			  		<label>Mot en Français : </label>
 			  		<input type="text" name="ajout_FR" id="ajout_FR"/>
 			  		<label>Mot en Anglais : </label>
+<<<<<<< HEAD
 			  		<input type="text" name="ajout_EN" id="ajout_EN"/>
 			  		<label>Mot en Espagnol : </label>
 			  		<input type="text" name="ajout_ES" id="ajout_ES"/>
 			  		<button type="button" name="ajout_Trad" id="ajout_Trad">Ajouter</button>
 					
+=======
+		  			<input type="text" name="ajout_EN" id="ajout_EN"/>
+		  			<label>Mot en Espagnol : </label>
+		  			<input type="text" name="ajout_ES" id="ajout_ES"/>
+		  			<button type="button" name="ajout_Trad" id="ajout_Trad">Ajouter</button>
+
+>>>>>>> version_stable_css_bdd
 					<div id="retourAjout"></div>
 				</form>
 			</fieldset>
@@ -68,9 +116,9 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="./plugin/jquery.flexdatalist.min.js"></script>
-	<script src="./utils.js"></script>
-	<script src="./ajout_Trad.js"></script>
-	<script src="./get_Trad.js"></script>
-	<script src="./search_Trad.js"></script>
+	<script src="./js/utils.js"></script>
+	<script src="./js/ajout_Trad.js"></script>
+	<script src="./js/get_Trad.js"></script>
+	<script src="./js/search_Trad.js"></script>
 </body>
 </html>

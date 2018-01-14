@@ -1,12 +1,22 @@
 html {
+<<<<<<< HEAD
 	width: 100%; height: 100%;
 }
 
 body {
 	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
 	width: auto; height: auto;
+=======
+	width: 100%;
+	height: 100%;
+>>>>>>> version_stable_css_bdd
 }
 
+body{
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+	width: auto;
+	height: auto;
+}
 
 
 ul { list-style: none; }
@@ -16,6 +26,7 @@ ul { list-style: none; }
 	flex-direction: row;
 	justify-content: space-around;
 }
+<<<<<<< HEAD
 fieldset {
 	border-radius: 0.6em;
 	margin: 2em 0em;
@@ -37,10 +48,37 @@ button {
     color: rgb(255, 255, 255);
 	padding: 0.4em 0.8em; margin: 0.5em 0.5em;
 	text-align: center;
+=======
+
+fieldset {
+  	border-radius: 0.6em;
+  	margin: 2em 0em;
+	background-color: rgba(255,51,255,0.1); /* hex #3366FF */
+}
+
+legend {
+  	color: rgb(255,51,255); /* hex #3366FF */
+}
+  
+.row {
+	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-between;
+}
+
+  
+button {
+	background-color: rgba(255,51,255,0.9); /* hex #3366FF */
+  	border: none;
+    color: rgb(255, 255, 255);
+  	padding: 0.4em 0.8em; margin: 0.5em 0.5em;
+  	text-align: center;
+>>>>>>> version_stable_css_bdd
     display: inline-block;
     font-size: 1em;
     border-radius: 0.5em; -webkit-border-radius: 8; -moz-border-radius: 8;
 }
+<<<<<<< HEAD
 button:hover {
 	background-color: rgba(255,20,255,0.8); /* hex #0044ff */
 	box-shadow: 0.1em 0.1em 0.1em rgba(255,20,255,0.5);
@@ -79,4 +117,49 @@ input:focus {
 		display: flex;
 		flex-direction: column;
 	}
+=======
+
+button:hover {
+
+	background-color: rgba(255,20,255,0.8); /* hex #0044ff */
+	box-shadow: 0.1em 0.1em 0.1em rgba(255,20,255,0.5);
+}
+
+select {
+  	border-radius: 0.5em;
+  	width: 30%;
+ 	padding: 0.2em 0.5em;
+} 
+
+input{
+	border-radius:0.3em;
+}
+
+input:hover {
+  	border-color: rgb(0,0,0);
+}
+
+input:focus {
+ 	border: solid 0.15em rgb(255,51,255); /* hex #3366FF */
+}
+  
+@media screen and (max-width: 480px) {
+ 	.container {
+ 		flex-direction: column;
+ 	}
+ 	.students {
+ 		position: absolute;
+ 		bottom: 0;
+ 		font-size: 0.8em;
+ 	}
+ 	button {
+ 		width: 30%;
+ 		text-align: center;
+ 		margin-left: auto; margin-right: auto;
+ 	}
+ 	form {
+ 		display: flex;
+ 		flex-direction: column;
+ 	}
+>>>>>>> version_stable_css_bdd
 }

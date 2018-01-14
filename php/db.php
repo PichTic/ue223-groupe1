@@ -60,3 +60,23 @@ function findWords($db, $langue, $keyword)
 
     return $data;
 }
+
+function getTrad($db, $langueCible, $langueOrigin, $mot)
+{
+    $columnCible = mb_strtoupper($langueCible);
+    $columnOrigin = mb_strtoupper($langueOrigin);
+
+    $sql = "SELECT `{$columnOrigin}` FROM mots WHERE `{$columnCible}` = :mot";
+
+    $connect = connect($db);
+    $query = $connect->prepare($sql);
+    $created = $query->execute([
+        'mot'     => $mot,
+        ]);
+
+    $data = $query->fetchAll();
+
+    deconnect($connect);
+
+    return $data;
+}

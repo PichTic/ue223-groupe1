@@ -31,13 +31,19 @@ $('#ajout_Trad').on('click', function(){
     returnErrors(errors, '#retourAjout');
   }
   if(errors.length == 0) {
-    var trads = $.post( "form_add.php", $( "#formAjouter" ).serialize() + '&ajout_Trad=' );
+    var trads = $.post( "./php/form_add.php", $( "#formAjouter" ).serialize() + '&ajout_Trad=' );
 
     trads.done(function(data) {
       var data = JSON.parse(data);
-      console.log(data);
       $("#retourAjout").html(data.content);
+
+      $('#ajout_EN').val('');
+      $('#ajout_FR').val('');
+      $('#ajout_ES').val('');
+
+
     });
+
 
     trads.fail(function() {
       $("#retourAjout").html('<p>Une erreur est survenue, réessayer</p>');

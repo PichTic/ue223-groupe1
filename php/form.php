@@ -3,10 +3,20 @@
 require_once './require.php';
 
 /**
- * Undocumented function.
+ * Nettoie une chaîne de caractère.
  *
- * @param [type] $name
  * @param [type] $value
+ */
+function sanitize_string($value)
+{
+    return trim(strip_tags($value));
+}
+
+/**
+ * Control des données de formulaire.
+ *
+ * @param [string] $name
+ * @param [string] $value
  */
 function check_field($name, $value)
 {
@@ -30,10 +40,10 @@ function check_field($name, $value)
 }
 
 /**
- * Undocumented function.
+ * Fonction qui control une entrée d'input par rapport à expression régulière.
  *
- * @param [type] $name
- * @param [type] $value
+ * @param [string] $name
+ * @param [string] $value
  */
 function check_trad($name, $value)
 {
@@ -46,10 +56,11 @@ function check_trad($name, $value)
 }
 
 /**
- * Undocumented function.
+ * fonction qui permet de vérifier que la requete GET pour l'auto completion vient bien
+ * de l'input approprié.
  *
- * @param [type] $name
- * @param [type] $value
+ * @param [string] $name
+ * @param [string] $value
  */
 function check_submit($name, $value)
 {
