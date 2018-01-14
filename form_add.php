@@ -19,9 +19,6 @@ $filter_post = [
         'options' => 'sanitize_string',
     ],
     ];
-/*
-*
-*/
 
 if (filter_has_var(INPUT_POST, 'ajout_Trad')) {
     $resultats = filter_input_array(INPUT_POST, $filter_post);

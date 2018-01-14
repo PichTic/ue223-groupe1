@@ -13,10 +13,10 @@ function sanitize_string($value)
 }
 
 /**
- * Undocumented function.
+ * Control des données de formulaire.
  *
- * @param [type] $name
- * @param [type] $value
+ * @param [string] $name
+ * @param [string] $value
  */
 function check_field($name, $value)
 {
@@ -40,10 +40,10 @@ function check_field($name, $value)
 }
 
 /**
- * Undocumented function.
+ * Fonction qui control une entrée d'input par rapport à expression régulière.
  *
- * @param [type] $name
- * @param [type] $value
+ * @param [string] $name
+ * @param [string] $value
  */
 function check_trad($name, $value)
 {
@@ -56,10 +56,11 @@ function check_trad($name, $value)
 }
 
 /**
- * Undocumented function.
+ * fonction qui permet de vérifier que la requete GET pour l'auto completion vient bien
+ * de l'input approprié.
  *
- * @param [type] $name
- * @param [type] $value
+ * @param [string] $name
+ * @param [string] $value
  */
 function check_submit($name, $value)
 {

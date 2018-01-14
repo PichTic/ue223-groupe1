@@ -16,7 +16,6 @@
 			<div class="students">
 				<h4>UE 223 - Mini-projet</h4>
 				<ul>
- 					<li>Da Silva Raphael</li>
  					<li>Latouille Melissa</li>
  					<li>Lombardi Marion</li>
  					<li>Vincent Pichot</li>
@@ -47,7 +46,7 @@
 				<input type="text" name="trad" id="trad" disabled>
 				<div id="retourSearch"></div>
   			</fieldset>
-	
+
 	  		<fieldset>
 			  	<legend>Ajouter un terme dans la base de données</legend>
 			  	<form id="formAjouter" method="POST">
@@ -58,7 +57,7 @@
 		  			<label>Mot en Espagnol : </label>
 		  			<input type="text" name="ajout_ES" id="ajout_ES"/>
 		  			<button type="button" name="ajout_Trad" id="ajout_Trad">Ajouter</button>
-				
+
 					<div id="retourAjout"></div>
 				</form>
 			</fieldset>
