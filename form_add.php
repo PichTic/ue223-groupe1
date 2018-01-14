@@ -6,14 +6,22 @@ $hasErrors = [];
 $tempData = [];
 
 $filter_post = [
-    'ajout_FR' => FILTER_SANITIZE_STRING,
-    'ajout_EN' => FILTER_SANITIZE_STRING,
-    'ajout_ES' => FILTER_SANITIZE_STRING,
-];
-
+    'ajout_FR' => [
+        'filter'  => FILTER_CALLBACK,
+        'options' => 'sanitize_string',
+    ],
+    'ajout_EN' => [
+        'filter'  => FILTER_CALLBACK,
+        'options' => 'sanitize_string',
+    ],
+    'ajout_ES' => [
+        'filter'  => FILTER_CALLBACK,
+        'options' => 'sanitize_string',
+    ],
+    ];
 /*
- *
- */
+*
+*/
 
 if (filter_has_var(INPUT_POST, 'ajout_Trad')) {
     $resultats = filter_input_array(INPUT_POST, $filter_post);

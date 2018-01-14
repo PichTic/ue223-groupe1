@@ -18,7 +18,10 @@ $filter_get = [
         return $reponse;
     },
   ],
-  'keyword' => FILTER_SANITIZE_STRING,
+  'keyword' => [
+    'filter'  => FILTER_CALLBACK,
+    'options' => 'sanitize_string',
+    ],
   'submit'  => [
     'filter'  => FILTER_CALLBACK,
     'options' => function ($input) {

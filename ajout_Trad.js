@@ -35,9 +35,15 @@ $('#ajout_Trad').on('click', function(){
 
     trads.done(function(data) {
       var data = JSON.parse(data);
-      console.log(data);
       $("#retourAjout").html(data.content);
+
+      $('#ajout_EN').val('');
+      $('#ajout_FR').val('');
+      $('#ajout_ES').val('');
+
+
     });
+
 
     trads.fail(function() {
       $("#retourAjout").html('<p>Une erreur est survenue, réessayer</p>');

@@ -3,6 +3,16 @@
 require_once './require.php';
 
 /**
+ * Nettoie une chaîne de caractère.
+ *
+ * @param [type] $value
+ */
+function sanitize_string($value)
+{
+    return trim(strip_tags($value));
+}
+
+/**
  * Undocumented function.
  *
  * @param [type] $name
