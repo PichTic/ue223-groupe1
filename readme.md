@@ -1,4 +1,4 @@
-#config de la bdd
+# config de la bdd
 
 - copiez le fichier `config.exemple.php` en `config.php` dans votre projet en local
 - attention de ne pas supprimer `config.exemple.php` pour les autres membres du groupe

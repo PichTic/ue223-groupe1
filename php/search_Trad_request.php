@@ -4,21 +4,11 @@
     //Déclaration des variables
 
     $langueOrigine = sanitize_string($_POST['langueOrigine']);
+    $mot = sanitize_string($_POST['mot']);
+    $langueCible = sanitize_string($_POST['langueCible']);
 
     //Requête pour chercher dans la base le mot traduit en fonction de la langue d'origine
-    if ('FR' == $langueOrigine) {
-        $mot = sanitize_string($_POST['mot']);
-        $langueCible = sanitize_string($_POST['langueCible']);
-        $resultat = getTrad($db, $langueOrigine, $langueCible, $mot);
-    } elseif ('EN' == $langueOrigine) {
-        $mot = sanitize_string($_POST['mot']);
-        $langue = sanitize_string($_POST['langueCible']);
-        $resultat = getTrad($db, $langueOrigine, $langueCible, $mot);
-    } else {
-        $mot = sanitize_string($_POST['mot']);
-        $langue = sanitize_string($_POST['langueCible']);
-        $resultat = getTrad($db, $langueOrigine, $langueCible, $mot);
-    }
+    $resultat = getTrad($db, $langueOrigine, $langueCible, $mot);
 
     //On renvoit le résultat du mot traduit
 
